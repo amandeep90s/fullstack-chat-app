@@ -37,7 +37,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 server.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Server is running at http://localhost:${PORT}`);
   connectDB();
 });

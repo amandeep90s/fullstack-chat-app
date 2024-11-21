@@ -7,7 +7,7 @@ export default [
   pluginJs.configs.recommended,
   {
     rules: {
-      'no-console': 'warn',
+      'no-console': 'off',
       eqeqeq: 'error',
       quotes: ['error', 'single', { allowTemplateLiterals: true }],
       semi: ['error', 'always'],
