@@ -6,12 +6,12 @@ import express from 'express';
 import path from 'path';
 
 import { connectDB } from './lib/db.js';
-
+dotenv.config();
 import { app, server } from './lib/socket.js';
 import authRoutes from './routes/auth.route.js';
 import messageRoutes from './routes/message.route.js';
 
-dotenv.config();
+
 
 const PORT = process.env.SERVER_PORT || 5000;
 const __dirname = path.resolve();
@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true
+    origin: "http://localhost:5173",
+    credentials: true,
   })
 );
 
