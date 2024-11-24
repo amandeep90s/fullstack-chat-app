@@ -20,7 +20,7 @@ const Profile = () => {
       await updateProfile({ profilePic: base64Image });
     };
   };
-  console.log('authUser', authUser);
+
   return (
     <div className="h-screen pt-20">
       <div className="max-w-2xl mx-auto p-4 py-8">
@@ -86,7 +86,6 @@ const Profile = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center justify-between py-2 border-b border-zinc-700">
                 <span>Member Since</span>
-                {console.log('Aman', authUser.createdAt)}
                 <span>{authUser.createdAt?.split('T')[0]}</span>
               </div>
               <div className="flex items-center justify-between py-2">
